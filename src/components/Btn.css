@@ -1,0 +1,11 @@
+.Btn {
+    width: 100px;
+    padding: 5px 10px;
+    background-color: brown;
+    text-align: center;
+    color: #fff;
+}
+.Btn:hover {
+    background-color: crimson;
+    cursor: pointer;
+}
