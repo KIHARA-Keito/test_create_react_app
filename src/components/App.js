@@ -1,18 +1,18 @@
 import React from 'react';
-import Btn from './Btn';
-import Clock from './Clock';
+import Counter from './Counter';
 import './App.css';
 
 function App() {
   return (
     <div className="App_container">
       <h1 className="App_title">hello world</h1>
-      <Btn>ボタン1</Btn>
-      <Btn>ボタン2</Btn>
-      <Btn>ボタン3</Btn>
-      <Clock seconds="100" />
+      <Counter />
     </div>
   );
 }
-
 export default App;
+
+/*
+import Clock from './Clock';
+      <Clock seconds="100" />
+ */
