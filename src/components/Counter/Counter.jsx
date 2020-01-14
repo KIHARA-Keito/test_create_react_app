@@ -1,5 +1,5 @@
 import React from 'react';
-import Btn from './Btn';
+import Btn from '../Btn/Btn';
 
 class Counter extends React.Component {
     constructor(props){
