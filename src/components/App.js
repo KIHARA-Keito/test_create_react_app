@@ -1,5 +1,6 @@
 import React from 'react';
 import Btn from './Btn';
+import Clock from './Clock';
 import './App.css';
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
       <Btn>ボタン1</Btn>
       <Btn>ボタン2</Btn>
       <Btn>ボタン3</Btn>
+      <Clock seconds="100" />
     </div>
   );
 }
