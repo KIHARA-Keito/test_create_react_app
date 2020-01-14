@@ -20,26 +20,26 @@ class App extends Component {
       loading: true
     });
 
-    let quizList;
+    let firstQiuzData;
     try {
       const response = await window.fetch(API_URL);
       const data = await response.json();
-      quizList = data.results;
+      firstQiuzData = data.results[0];
     } catch(error) {
-      quizList = null;
+      firstQiuzData = null;
     }
 
     this.setState({
       loading: false,
-      data: quizList
+      data: firstQiuzData
     });
   }
 
   render() {
     return(
       <div className="App">
-        { this.renderRequestButton() }
         { this.renderData() }
+        { this.renderRequestButton() }
       </div>
     );
   }
@@ -48,16 +48,10 @@ class App extends Component {
     if (this.state.loading) {
       return <p>データ取得中...</p>;
     }
-    if (!this.state.loading && !this.state.data) {
+    if (this.state.loading && !this.state.data) {
       return <p>データなし</p>;
     }
-    const quizItems = this.state.data.map((quiz,index) => {
-      const quizNumber = index + 1
-      return(
-        <li key={quizNumber}>Q{quizNumber} : {quiz.question}</li>
-      );
-    });
-    return <ul>{ quizItems }</ul>;
+    return <p>{JSON.stringify( this.state.data )}</p>;
   }
   renderRequestButton() {
     if (this.state.loading) {
