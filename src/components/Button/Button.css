@@ -1,0 +1,16 @@
+
+.Button_container {
+    display: inline-block;
+    background-color: crimson;
+    padding: 5px 15px;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.Button_container:hover {
+    background-color: red;
+}
+.Button_container:active {
+    background-color: brown;
+}

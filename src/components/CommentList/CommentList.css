@@ -1,0 +1,12 @@
+
+ul {
+  margin: 10px 0;
+  padding: 0;
+}
+.CommentList_item {
+  background-color: #eee;
+  margin-bottom: 8px;
+  padding: 5px 15px;
+  list-style: none;
+  color: #666;
+}
